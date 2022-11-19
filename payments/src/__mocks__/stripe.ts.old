@@ -1,0 +1,12 @@
+/*
+old approach: use mock stripe and not really send out API request while testing
+new approach: actaully send API to stripe
+*/
+
+export const stripe = {
+    charges: {
+        create: jest.fn().mockResolvedValue({}) // return promise {} while create has been called
+    }
+};
+
+
